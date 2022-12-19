@@ -14,4 +14,8 @@ describe('Converts an integer to a roman number', () => {
   test('Convert the number 4 to IV', () => {
     expect(convertToRomanNumeral(4)).toBe('IV');
   });
+
+  test('Convert the number 5 to V', () => {
+    expect(convertToRomanNumeral(5)).toBe('V');
+  });
 });

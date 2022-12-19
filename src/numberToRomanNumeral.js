@@ -8,8 +8,14 @@ const convertNumberToRomanNumeral = (integer) => {
     } else if (integer == 4) {
       romanNumeral += 'IV';
       integer -= 4;
+    } else if (integer == 5) {
+      romanNumeral += 'V';
+      integer -= 5;
+    } else {
+      integer -= 1;
     }
   }
+
   return romanNumeral;
 };
 
