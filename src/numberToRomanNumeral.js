@@ -11,9 +11,6 @@ const convertNumberToRomanNumeral = (integer) => {
     } else if (integer >= 5 && integer < 9) {
       romanNumeral += 'V';
       integer -= 5;
-    } else if (integer === 9) {
-        romanNumeral += 'IX';
-        integer -= 9;
     } else {
       integer -= 1;
     }
