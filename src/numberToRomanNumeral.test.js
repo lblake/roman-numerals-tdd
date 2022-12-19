@@ -11,7 +11,7 @@ describe('Converts an integer to a roman number', () => {
     expect(convertToRomanNumeral(3)).toBe('III');
   });
 
-  test('Convert the number 4 to IIII', () => {
-    expect(convertToRomanNumeral(4)).toBe('IIII');
+  test('Convert the number 4 to IV', () => {
+    expect(convertToRomanNumeral(4)).toBe('IV');
   });
 });
