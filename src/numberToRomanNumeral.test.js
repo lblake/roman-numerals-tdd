@@ -19,4 +19,7 @@ describe('Converts an integer to a roman number', () => {
     expect(convertToRomanNumeral(5)).toBe('V');
   });
  
+  test('Convert the number 9 to IX', () => {
+    expect(convertToRomanNumeral(9)).toBe('IX');
+  });
 });
