@@ -22,4 +22,8 @@ describe('Converts an integer to a roman number', () => {
   test('Convert the number 9 to IX', () => {
     expect(convertToRomanNumeral(9)).toBe('IX');
   });
+
+  test('Convert the number 10 to X', () => {
+    expect(convertToRomanNumeral(10)).toBe('X');
+  });
 });
