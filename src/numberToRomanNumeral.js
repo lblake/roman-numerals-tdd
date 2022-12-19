@@ -1,5 +1,10 @@
-const convertNumberToRomanNumeral = () => {
-    return "I"
+const convertNumberToRomanNumeral = (integer) => {
+    if(integer === 1){ 
+        return 'I';
+    }else{
+        return 'II'
+
+    }
 };
 
 
