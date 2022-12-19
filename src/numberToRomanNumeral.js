@@ -5,7 +5,7 @@ const convertNumberToRomanNumeral = (integer) => {
         return "II";
       } else if (integer === 3) {
         return "III";
-      }
+      } 
   
     }
 
