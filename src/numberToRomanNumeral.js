@@ -14,9 +14,15 @@ const convertNumberToRomanNumeral = (integer) => {
     } else if (integer === 9) {
       romanNumeral += 'IX';
       integer -= 9;
-    } else if (integer >= 10) {
+    } else if (integer >= 10 && integer < 40) {
       romanNumeral += 'X';
       integer -= 10;
+    } else if (integer >= 40 && integer < 50) {
+      romanNumeral += 'XL';
+      integer -= 40;
+    } else if (integer >= 50) {
+      romanNumeral += 'L';
+      integer -= 50;
     } else {
       integer -= 1;
     }

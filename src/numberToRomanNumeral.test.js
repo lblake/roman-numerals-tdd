@@ -11,6 +11,10 @@ describe('Converts an integer to a roman number', () => {
     [10, 'X'],
     [11, 'XI'],
     [16, 'XVI'],
+    [29, 'XXIX'],
+    [44, 'XLIV'],
+    [68, 'LXVIII'],
+    [83, 'LXXXIII'],
   ])(`should convert the number %i, to roman numeral %s`, (number, result) => {
     expect(convertToRomanNumeral(number)).toBe(result);
   });
