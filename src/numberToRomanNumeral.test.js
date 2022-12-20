@@ -17,11 +17,20 @@ describe('Converts an integer to a roman number', () => {
     [83, 'LXXXIII'],
     [97, 'XCVII'],
     [99, 'XCIX'],
-    [101, "CI"],
-    [200, "CC"],
+    [101, 'CI'],
+    [200, 'CC'],
     [400, 'CD'],
+    [500, 'D'],
+    [550, 'DL'],
+    [649, 'DCXLIX'],
+    [798, 'DCCXCVIII'],
+    [891, 'DCCCXCI'],
+    [1000, 'M'],
+    [1023, 'MXXIII'],
+    [2014, 'MMXIV'],
+    [3000, 'MMM'],
   ])(
-    `should convert the number %i,to the roman numeral %s`,
+    `Converts the number %i,to the roman numeral %s`,
     (number, result) => {
       expect(convertToRomanNumeral(number)).toBe(result);
     }

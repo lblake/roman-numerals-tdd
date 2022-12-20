@@ -32,6 +32,12 @@ const convertNumberToRomanNumeral = (integer) => {
     } else if (integer >= 400 && integer < 500) {
       romanNumeral += 'CD';
       integer -= 400;
+    } else if (integer >= 500 && integer < 900) {
+      romanNumeral += 'D';
+      integer -= 500;
+    } else if (integer >= 900 && integer < 3000) {
+      romanNumeral += 'M';
+      integer -= 1000;
     } else {
       integer -= 1;
     }
