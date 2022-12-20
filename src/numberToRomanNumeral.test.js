@@ -15,7 +15,15 @@ describe('Converts an integer to a roman number', () => {
     [44, 'XLIV'],
     [68, 'LXVIII'],
     [83, 'LXXXIII'],
-  ])(`should convert the number %i, to roman numeral %s`, (number, result) => {
-    expect(convertToRomanNumeral(number)).toBe(result);
-  });
+    [97, 'XCVII'],
+    [99, 'XCIX'],
+    [101, "CI"],
+    [200, "CC"],
+    [400, 'CD'],
+  ])(
+    `should convert the number %i,to the roman numeral %s`,
+    (number, result) => {
+      expect(convertToRomanNumeral(number)).toBe(result);
+    }
+  );
 });

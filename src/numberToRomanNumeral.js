@@ -20,9 +20,18 @@ const convertNumberToRomanNumeral = (integer) => {
     } else if (integer >= 40 && integer < 50) {
       romanNumeral += 'XL';
       integer -= 40;
-    } else if (integer >= 50) {
+    } else if (integer >= 50 && integer < 90) {
       romanNumeral += 'L';
       integer -= 50;
+    } else if (integer >= 90 && integer < 100) {
+      romanNumeral += 'XC';
+      integer -= 90;
+    } else if (integer >= 100 && integer < 400) {
+      romanNumeral += 'C';
+      integer -= 100;
+    } else if (integer >= 400 && integer < 500) {
+      romanNumeral += 'CD';
+      integer -= 400;
     } else {
       integer -= 1;
     }
