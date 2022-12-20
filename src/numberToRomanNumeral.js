@@ -1,49 +1,63 @@
 const convertNumberToRomanNumeral = (integer) => {
-  let romanNumeral = '';
+  let Numeral = '';
+  const romanNumber = {
+    One: 'I',
+    Four: 'IV',
+    Five: 'V',
+    Nine: 'IX',
+    Ten: 'X',
+    Forty: 'XL',
+    Fifty: 'L',
+    Ninety: 'XC',
+    OneHundred: 'C',
+    FourHundred: 'CD',
+    FiveHundred: 'D',
+    Thousand: 'M',
+  };
 
   while (integer > 0) {
     if (integer < 4) {
-      romanNumeral += 'I';
+      Numeral += romanNumber.One;
       integer -= 1;
     } else if (integer == 4) {
-      romanNumeral += 'IV';
+      Numeral += romanNumber.Four;
       integer -= 4;
     } else if (integer >= 5 && integer < 9) {
-      romanNumeral += 'V';
+      Numeral += romanNumber.Five;
       integer -= 5;
     } else if (integer === 9) {
-      romanNumeral += 'IX';
+      Numeral += romanNumber.Nine;
       integer -= 9;
     } else if (integer >= 10 && integer < 40) {
-      romanNumeral += 'X';
+      Numeral += romanNumber.Ten;
       integer -= 10;
     } else if (integer >= 40 && integer < 50) {
-      romanNumeral += 'XL';
+      Numeral += romanNumber.Forty;
       integer -= 40;
     } else if (integer >= 50 && integer < 90) {
-      romanNumeral += 'L';
+      Numeral += romanNumber.Fifty;
       integer -= 50;
     } else if (integer >= 90 && integer < 100) {
-      romanNumeral += 'XC';
+      Numeral += romanNumber.Ninety;
       integer -= 90;
     } else if (integer >= 100 && integer < 400) {
-      romanNumeral += 'C';
+      Numeral += romanNumber.OneHundred;
       integer -= 100;
     } else if (integer >= 400 && integer < 500) {
-      romanNumeral += 'CD';
+      Numeral += romanNumber.FourHundred;
       integer -= 400;
     } else if (integer >= 500 && integer < 900) {
-      romanNumeral += 'D';
+      Numeral += romanNumber.FiveHundred;
       integer -= 500;
     } else if (integer >= 900 && integer < 3000) {
-      romanNumeral += 'M';
+      Numeral += romanNumber.Thousand;
       integer -= 1000;
     } else {
       integer -= 1;
     }
   }
 
-  return romanNumeral;
+  return Numeral;
 };
 
 module.exports = convertNumberToRomanNumeral;
