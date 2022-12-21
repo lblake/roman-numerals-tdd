@@ -29,10 +29,7 @@ describe('Converts an integer to a roman number', () => {
     [1023, 'MXXIII'],
     [2014, 'MMXIV'],
     [3000, 'MMM'],
-  ])(
-    `Converts the number %i,to the roman numeral %s`,
-    (number, result) => {
-      expect(convertToRomanNumeral(number)).toBe(result);
-    }
-  );
+  ])(`Converts the number %i,to the roman numeral %s`, (number, result) => {
+    expect(convertToRomanNumeral(number)).toBe(result);
+  });
 });
